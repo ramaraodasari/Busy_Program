@@ -22,7 +22,7 @@ public class PhoneStateReceiver extends BroadcastReceiver {
             String incomingNumber = intent.getStringExtra(TelephonyManager.EXTRA_INCOMING_NUMBER);
 
             AudioManager am=(AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
-            am.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+            am.setRingerMode(AudioManager.RINGER_MODE_SILENT);
             String str=intent.getExtras().getString(TelephonyManager.EXTRA_STATE);
             String mess;
             Global g=(Global)context.getApplicationContext();
